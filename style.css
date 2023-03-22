@@ -158,6 +158,12 @@ a {
   padding: 4rem;
   transition: 1s ease-in-out;
 }
+
+.card_Inner .Extra_Info {
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
+}
 .card_Inner > .card_convert_temp > .convert_input {
   padding: 8px 10px;
   font-size: 12px;

@@ -4,6 +4,8 @@ import { TempColorAndImg, debounceFunc, getDate } from "./Helpers.js";
 const ConvertInput = document.querySelector(".convert_input");
 const ConvertBtn = document.querySelector(".convert_btn");
 const TempCelsius = document.querySelector(".temp_Celsius_num");
+const MinTemp = document.querySelector(".Extra_Info_Min strong");
+const MaxTemp = document.querySelector(".Extra_Info_Max strong");
 const State = document.querySelector(".State");
 const SearchInput = document.querySelector(".Search_Input");
 const SearchBtn = document.querySelector(".Search_Icon");
@@ -31,6 +33,8 @@ const getWeather = async (city = "Lahore") => {
     const response = await fetch(url, options);
     const data = await response.json();
     if (data.temp) {
+      MinTemp.textContent = data.min_temp;
+      MaxTemp.textContent = data.max_temp;
       TempCelsius.textContent = data.temp;
       State.textContent = city;
       TempColorAndImg();
@@ -52,5 +56,7 @@ SearchInput.addEventListener("keypress", (e) => {
   }
 });
 SearchBtn.addEventListener("click", (e) => {
-  getWeather(SearchInput.value);
+  if (SearchInput.value.length >= 3) {
+    getWeather(SearchInput.value);
+  }
 });
