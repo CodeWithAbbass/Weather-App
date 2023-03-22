@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  font-family: "Poppins", sans-serif;
+}
+.d_flex {
+  display: flex;
+  align-items: center;
+}
+.w_100 {
+  width: 100%;
+}
+.h_100 {
+  height: 100%;
+}
+img {
+  vertical-align: middle;
+}
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.border {
+  border: 1px solid red;
+}
+
+/* ************************  */
+.Header {
+  padding: 0.6rem;
+}
+.Header_Left,
+.Header_Right {
+  width: 50%;
+}
+
+.Header_Left {
+  text-align: left;
+}
+.Header_Right {
+  text-align: right;
+}
+
+.Header_Left > .icon {
+  margin-right: 10px;
+  width: 40px;
+  background-color: #383838;
+  border-radius: 50%;
+  padding: 5px 10px;
+  text-align: center;
+  display: block;
+  transition: 0.4s ease-in-out;
+}
+.Header_Left > .icon:hover {
+  background-color: #4f4f4f;
+  box-shadow: 0px 0px 10px 0px white;
+}
+.Header_Left > .icon > svg {
+  color: white;
+}
+
+.Header_Left > .StateLink > .State {
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.Header_Right > label {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+.Header_Right > label > .Search_Icon {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  transform: translate(100%, 50%);
+  color: white;
+  padding-top: 2px;
+}
+.Header_Right > label > .Search_Input {
+  width: 100%;
+  background-color: #383838;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  border-radius: 30px;
+  padding-left: 3rem;
+  transition: 0.4s ease-in-out;
+}
+.Header_Right > label > .Search_Input:focus-visible {
+  color: white;
+  box-shadow: 0px 0px 10px 0px white;
+}
+
+/* *************************** */
+/* Card  */
+.card {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.card_Inner {
+  width: 350px;
+  height: auto;
+  margin: auto;
+  border-radius: 30px;
+  background-color: #eeeeee;
+  padding: 2rem;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+.card_Inner > .card_Inner_header {
+  justify-content: space-between;
+}
+.card_Inner > .card_Inner_header > .header_Day {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.card_Inner > .card_Inner_header > .header_Time {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.card_Inner > .card_Inner_header > .header_Time .Period {
+  text-transform: uppercase;
+}
+.card_Inner > .card_inner_temp {
+  margin: 2rem 0;
+}
+.card_Inner > .card_inner_temp > .temp_num {
+  font-size: 3rem;
+  font-weight: 700;
+  width: 50%;
+  color: green;
+}
+.card_Inner > .card_inner_temp > .temp_num sup {
+  font-size: 2rem;
+}
+.card_Inner > .card_inner_temp > .temp_img {
+  width: 50%;
+  background-image: url("./Assets/Sun.png");
+  /* background-image: url("./Assets/Moon.png"); */
+  /* background-image: url("./Assets/Rain.png"); */
+  /* background-image: url("./Assets/Light.png"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 4rem;
+  transition: 1s ease-in-out;
+}
+.card_Inner > .card_convert_temp > .convert_input {
+  padding: 8px 10px;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  transition: 0.4s ease-in-out;
+}
+.card_Inner > .card_convert_temp > .convert_input:focus-visible {
+  box-shadow: 0px 0px 10px 0px white;
+}
+.card_Inner > .card_convert_temp > .convert_btn {
+  font: 14px;
+  font-weight: 500;
+  background-color: #383838;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  padding: 8px;
+  margin-top: 0.5rem;
+  transition: 0.4s ease-in-out;
+}
+.card_Inner > .card_convert_temp > .convert_btn:hover {
+  background-color: #4f4f4f;
+  box-shadow: 0px 0px 10px 0px white;
+}
+.card .card_BgWind {
+  position: absolute;
+  bottom: -75%;
+  left: -20%;
+  background: #00a1ff17;
+  width: 500px;
+  height: 500px;
+  z-index: -1;
+}
+.card .card_BgWind.Wind1 {
+  border-radius: 65% 65%;
+  animation: WindRotate 5s linear 0.4s infinite normal both;
+}
+.card .card_BgWind.Wind2 {
+  border-radius: 49% 60%;
+  animation: WindRotate 5s linear 0.5s infinite normal forwards;
+}
+.card .card_BgWind.Wind3 {
+  border-radius: 50% 45%;
+  animation: WindRotate 5s linear 0.6s infinite normal both;
+}
+.card .card_BgWind.Wind4 {
+  border-radius: 65% 40%;
+  animation: WindRotate 5s linear 0.7s infinite normal both;
+}
+
+@keyframes WindRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 370px) {
+  .Header {
+    flex-direction: column-reverse;
+  }
+  .Header_Left {
+    justify-content: space-between;
+  }
+  .Header_Left,
+  .Header_Right {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  .card_Inner {
+    width: 90%;
+  }
+  .card_Inner > .card_inner_temp > .temp_num {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .card_Inner > .card_inner_temp > .temp_num sup {
+    font-size: 1rem;
+  }
+  .card_Inner > .card_inner_temp > .temp_img {
+    padding: 2rem;
+  }
+  .card .card_BgWind {
+    bottom: -100%;
+    left: -35%;
+  }
+}

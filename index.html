@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="./index.js" defer></script>
+  </head>
+  <body>
+    <header class="Header d_flex">
+      <div class="Header_Left d_flex">
+        <a class="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="12"
+            fill="currentColor"
+            class="bi bi-grid-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z"
+            />
+          </svg>
+        </a>
+        <a class="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="12"
+            fill="currentColor"
+            class="bi bi-bell-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"
+            />
+          </svg>
+        </a>
+        <a class="StateLink">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="12"
+            fill="currentColor"
+            class="bi bi-geo-alt-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+            />
+          </svg>
+          <span class="State">Lahore</span>
+        </a>
+      </div>
+      <div class="Header_Right">
+        <label>
+          <a class="Search_Icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+              />
+            </svg>
+          </a>
+          <input type="text" placeholder="Search City" class="Search_Input" />
+        </label>
+      </div>
+    </header>
+    <div class="card">
+      <div class="card_Inner">
+        <div class="card_Inner_header d_flex">
+          <div class="header_Day">Monday</div>
+          <div class="header_Time">
+            <span class="Hours">12</span>:<span class="Minutes">00</span
+            ><span class="Period">pm</span>
+          </div>
+        </div>
+        <div class="card_inner_temp d_flex">
+          <div class="temp_num">
+            <span class="temp_Celsius_num">21</span><sup>o</sup><span>C</span>
+          </div>
+          <div class="temp_img"></div>
+        </div>
+        <div class="card_convert_temp">
+          <input
+            class="convert_input w_100"
+            type="number"
+            placeholder="Enter Fahrenheit Value to Convert Celsius..."
+          />
+          <button class="convert_btn w_100">Convert</button>
+        </div>
+        <div class="card_BgWind Wind1"></div>
+        <div class="card_BgWind Wind2"></div>
+        <div class="card_BgWind Wind3"></div>
+        <div class="card_BgWind Wind4"></div>
+      </div>
+    </div>
+  </body>
+</html>
